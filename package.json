@@ -1,0 +1,10 @@
+{
+  "name": "grama-connect-root",
+  "private": true,
+  "scripts": {
+    "client:dev": "cd client && bun dev",
+    "client:build": "cd client && bun build",
+    "server:dev": "echo 'Server logic not implemented yet'",
+    "install:all": "cd client && bun install"
+  }
+}
