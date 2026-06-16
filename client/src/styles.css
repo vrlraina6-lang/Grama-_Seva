@@ -1,0 +1,153 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "DM Serif Display", "Noto Serif Tamil", Georgia, serif;
+  --font-sans: "Fira Sans", "Noto Sans Tamil", system-ui, sans-serif;
+  --font-tamil: "Noto Sans Tamil", "Fira Sans", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-cream: var(--cream);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Emerald Prestige palette */
+  --emerald-deep: oklch(0.32 0.07 165);     /* #064e3b */
+  --emerald: oklch(0.46 0.10 165);          /* #0d7a5f */
+  --gold-raw: oklch(0.75 0.13 85);          /* #c9a84c */
+  --cream-raw: oklch(0.96 0.03 90);         /* #f5f0e0 */
+
+  --background: var(--cream-raw);
+  --foreground: oklch(0.20 0.04 165);
+
+  --card: oklch(0.99 0.01 90);
+  --card-foreground: oklch(0.20 0.04 165);
+
+  --popover: oklch(0.99 0.01 90);
+  --popover-foreground: oklch(0.20 0.04 165);
+
+  --primary: var(--emerald-deep);
+  --primary-foreground: var(--cream-raw);
+
+  --secondary: oklch(0.92 0.03 90);
+  --secondary-foreground: var(--emerald-deep);
+
+  --muted: oklch(0.93 0.02 90);
+  --muted-foreground: oklch(0.45 0.04 160);
+
+  --accent: var(--emerald);
+  --accent-foreground: var(--cream-raw);
+
+  --gold: var(--gold-raw);
+  --gold-foreground: oklch(0.20 0.05 60);
+
+  --cream: var(--cream-raw);
+
+  --destructive: oklch(0.55 0.20 25);
+  --destructive-foreground: oklch(0.98 0.01 90);
+
+  --success: oklch(0.55 0.15 150);
+  --warning: oklch(0.72 0.16 65);
+
+  --border: oklch(0.86 0.02 90);
+  --input: oklch(0.88 0.02 90);
+  --ring: var(--emerald);
+}
+
+.dark {
+  --background: oklch(0.18 0.03 165);
+  --foreground: var(--cream-raw);
+  --card: oklch(0.22 0.04 165);
+  --card-foreground: var(--cream-raw);
+  --popover: oklch(0.22 0.04 165);
+  --popover-foreground: var(--cream-raw);
+  --primary: var(--gold-raw);
+  --primary-foreground: oklch(0.18 0.03 165);
+  --secondary: oklch(0.28 0.04 165);
+  --secondary-foreground: var(--cream-raw);
+  --muted: oklch(0.28 0.04 165);
+  --muted-foreground: oklch(0.75 0.02 90);
+  --accent: var(--emerald);
+  --accent-foreground: var(--cream-raw);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--gold-raw);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    font-family: var(--font-sans);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  :lang(ta), .lang-ta {
+    font-family: var(--font-tamil);
+  }
+}
+
+/* Kolam dot pattern — subtle traditional Tamil motif */
+@utility kolam-pattern {
+  background-image: radial-gradient(
+    circle at center,
+    color-mix(in oklab, var(--emerald-deep) 18%, transparent) 1px,
+    transparent 1.5px
+  );
+  background-size: 24px 24px;
+}
+
+@utility kolam-pattern-gold {
+  background-image: radial-gradient(
+    circle at center,
+    color-mix(in oklab, var(--gold-raw) 30%, transparent) 1px,
+    transparent 1.5px
+  );
+  background-size: 20px 20px;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
