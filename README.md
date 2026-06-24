@@ -77,6 +77,34 @@ The project is structured as a professional, scalable **monorepo-style workspace
 
 ---
 
+## 🎬 Demo Video
+
+▶️ **[Watch Full Demo on Google Drive](https://drive.google.com/file/d/1YSwP1_Z916mRglqsTKnD80GCDN6GZ2AP/view?usp=sharing)**
+
+---
+
+## 📅 Development History
+
+| Date | Commit Message |
+|------|---------------|
+| Jun 15 | Initial project setup with workspace config and MIT license |
+| Jun 15 | Configure Vite build and TanStack Start SSR setup |
+| Jun 16 | Add global layout and bilingual Tamil/English provider |
+| Jun 17 | Build landing page with village search |
+| Jun 17 | Add citizen quick actions and scheme eligibility engine |
+| Jun 18 | Integrate Leaflet ward map for civic issue tracking |
+| Jun 19 | Add QR code generation for village pages |
+| Jun 19 | Add utility functions and village data registry |
+| Jun 20 | Scaffold backend server structure for Node.js/Express |
+| Jun 21 | Implement dynamic village dashboard routing |
+| Jun 22 | Add core UI components using Radix and Tailwind |
+| Jun 23 | Configure routing and entry points for TanStack Start |
+| Jun 23 | Add project linting and formatting configuration |
+| Jun 24 | Add global site navigation and chrome |
+| Jun 25 | Add routes documentation for developer reference |
+
+---
+
 ## 🚀 Getting Started
 To run the full project:
 1. `npm run install:all`
